@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Javascript - Manipulação do DOM</title>
+
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <img id="dark" onclick="addDarkTheme()" src="img/darkTheme.svg"/>
+        <img id="light" onclick="removeDarkTheme()" src="img/lightTheme.svg"/>
+     </div>
+    
+    
+     <h1 id="titulo">Grande tabela de clientes</h1> 
+    
+    <br>
+    <form id="form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required name="nome" size="50" placeholder="Digite seu nome" /><br/>
+        <br>
+        <label for="curso">Curso</label>
+        <input type="text" id="curso" name="curso" size="50" placeholder="Digite seu curso" /><br/>
+        <br>
+        <label for="universidade">Universidade</label>
+        <input type="text" id="universidade" name="universidade"  size="50" placeholder="Digite sua universidade" />
+        <br> <br>
+        <button type="button" onclick="limpar()">Limpar</button>
+        <button type="button" onclick="limparTabela()">Limpar Tabela</button>
+        <button type="submit" >Salvar</button>
+        <br>
+    </form>
+    <p id="mensagem"></p>
+
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Curso</th>
+                <th>Universidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Professor</td>
+                <td>Ciência da Computação</td>
+                <td>UPF</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

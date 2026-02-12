@@ -1,0 +1,5 @@
+P = int(input("Quantidade de Camisetas Pequenas: "))
+M = int(input("Quantidade de Camisetas Médias: "))
+G = int(input("Quantidade de Camisetas Grandes: "))
+valor = (P * 10) + (M * 12) + (G * 15)
+print("Valor a ser pago: R$", valor)

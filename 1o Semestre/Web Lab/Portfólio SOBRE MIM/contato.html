@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio: Contato</title>
+    <link rel="stylesheet" href="css\styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="titulo">
+            <h2>Contato</h2>
+            <p class="subtitulo">Avaliações ou comentários podem ser feito por meio do formulário.</p>
+            <p class="subtitulo">ou envie uma mensagem direta via e-mail <a href="mailto:rafaelbrendlerpizarro@gmail.com?subject=Portfólio"><img src="img/gmail.webp" style="height: 2.5%; width: 2.5%;"></a> ou WhatsApp <a href="https://wa.link/rp9cgr" target="_blank"><img src="img/whatsapp.png" style="height: 3%; width: 3%;"></a></p>
+        </div>
+    </header>
+
+    <nav>
+        <p class="texto_nav">Navegação:</p>
+        
+        <a class="texto_nav" href= "index.html"><b>Página Inicial</b></a>
+        
+        <a class="texto_nav" href="pagina2.html"><b>Segunda Página</b></a>
+        
+        <a class="texto_nav" href="sobre.html"><b>Sobre</b></a>
+        <img src="img/piplup.png">  
+   </nav>
+
+    <div class="texto">
+        <br><br>
+        <form action="processa_cadastro.php" method="post" class="cadastro">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="7" cols="50"></textarea>
+            <br><br>
+
+            <input type="submit" value="Enviar mensagem">
+            <input type="reset" value="Limpar">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Theme(#Code, Description
+Book(#ISBN, Pages, Title, PublishYear, @ThemeCode)
+	ThemeCode references Theme(Code)
+Country(#Acronyum, CountryName)
+Author(#Code, AuthorName, Birthdate, Email, @CountryAcronyum)
+	CountryAcronium references Country(Acronyum)
+BookAuthor(#Code, ContributionType, @AuthorCode, @BookCode)
+	AuthorCode references Author(Code)
+	BookCode references Book(ISBN)

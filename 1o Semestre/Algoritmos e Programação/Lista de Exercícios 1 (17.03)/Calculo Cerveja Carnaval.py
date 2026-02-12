@@ -1,0 +1,5 @@
+print("Consumo de cerveja no bloco de carnaval em litros")
+caixas = int(input("Quantas caixas de cerveja foram consumidas? "))
+garrafas = int((caixas * 24))
+litros = float((garrafas * 0.6))
+print("Foram consumidos", litros, "Litros de cerveja")

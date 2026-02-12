@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachorro Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        #dogImage {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .loading {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veja um cachorro aleatório!</h1>
+    <button type="button" onclick="fetchRandomDog()">Gerar uma imagem aleatória</button>
+    <p id="status" class="loading">Clique no botão para gerar uma imagem</p>
+    <img id="dogImage" alt="Imagem de cachorro aleatório" style="display: none;">
+
+    <script>
+
+        const dogImage = document.getElementById('dogImage');
+        const statusEl = document.getElementById('status');
+    
+        const API_URL = 'https://dog.ceo/api/breeds/image/random';
+        
+        function fetchRandomDog() {
+            statusEl.textContent = 'Carregando imagem...';
+            dogImage.style.display = 'none';
+            
+            fetch(API_URL)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Não foi possível carregar a imagem');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    dogImage.src = data.message;
+                    dogImage.onload = () => {
+                        dogImage.style.display = 'block';
+                        statusEl.textContent = 'Aproveite esta imagem de cachorro!';
+                    };
+                })
+                .catch(error => {
+                    statusEl.textContent = 'Erro ao carregar a imagem: ' + error.message;
+                    statusEl.style.color = 'red';
+                });
+            }
+    </script>
+</body>
+</html>

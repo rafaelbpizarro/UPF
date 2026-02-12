@@ -1,0 +1,59 @@
+p{
+    color:violet;
+    font-family:fantasy;
+    font-size:20px;
+}
+
+body{
+    padding:20px;
+
+}
+
+.meu-paragrafo{
+    color:darkorange;
+    font-family:monospace;
+    font-size:40px;
+}
+
+.outro-paragrafo{
+    color:forestgreen;
+    font-family:Arial;
+    font-size:20px
+}
+/* ESTE É UM COMENTÁRIO */
+
+h1{
+    color:aquamarine;
+    font-size:50px;
+}
+
+#titulo-principal{
+
+    background-color:black;
+    color:red;
+    font-family:cursive;
+    padding-left:60px;
+
+}
+
+/* Cores */
+
+.titulo-cores{
+    color:black;
+    font-family:monospace;
+    font-size:40px;
+}
+
+.nome-da-cor{
+    color:blue;
+}
+
+.hexa{
+    color:#3FF40A;
+    background-color:#333333;
+}
+
+.rgb{
+    color:rgb(255, 251, 0);
+    background-color:rgb(14, 13, 80);
+}
